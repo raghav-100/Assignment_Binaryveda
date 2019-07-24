@@ -1,0 +1,32 @@
+package com.example.raghav.assignment_binaryveda;
+
+/**
+ * Created by raghav on 7/24/19.
+ */
+
+import android.util.Base64;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.http.GET;
+import retrofit2.http.Header;
+import retrofit2.http.Headers;
+
+
+public interface ApiModule {
+
+    String Base_url = "https://apistage.thewift.com/1.0/profiles/";
+    //String Base_url = "https://api.myjson.com/bins/";
+
+
+    //String value ="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4MWU5ZmNlOTg2NGUzYWE1OWM5MjU2OTQ3ZjViMDdhNmNhZmE4MmY1ZGQ3ZjdkZDY0MmUzMzkwNWMyOWEzNGYzYWY0NmIyMWY1N2RkMjgyIn0.eyJhdWQiOiIzIiwianRpIjoiMTgxZTlmY2U5ODY0ZTNhYTU5YzkyNTY5NDdmNWIwN2E2Y2FmYTgyZjVkZDdmN2RkNjQyZTMzOTA1YzI5YTM0ZjNhZjQ2YjIxZjU3ZGQyODIiLCJpYXQiOjE1NjMyNzg5NDksIm5iZiI6MTU2MzI3ODk0OSwiZXhwIjoxNTk0OTAxMzQ5LCJzdWIiOiI5OTcwIiwic2NvcGVzIjpbXX0.Iod7Rv5VTMcnsMKHXdo5KN3ojAZQvIub6RUpfaDI8GosLaVKqon_9rFYcLVSU-w-Jt-EdwhhUb2zfloNhZP-7PiAtwE7qr3xpRUutkO154mFiEAiUh_WxUUz3e5VuuVsFUN4TPu6Qzf-qMtxR-SZsPUUVL7hvLjIGxxN-0498QoDom0jGKiuInoiJsE9lcTkOqpM1d6Tc2nStF350A5-YVo4ZhDW5ZOYwsnyjsYpprwZNFjN3vgRAokgnHMo4hNANSrVvtvFSj-g3uF6pozOm5GOn9YC_SVnEq6MdJaCVnkDYO9cnA63uP_sRZIvFx3aA0oVXNGWbqnCnSObAqOcaEPfABCqFpjal_-Q9CJ-MIN0fOMQ0z2Z8YPf_UOQHTSXlxa-uK9X2iN0bGUEVpYf9f8kULzSvnWcTsUD_t97It0uShDBv7A4x5MRRWrF7s8jyqSw0Vyg_dBV5nxItaspHsO-34vQs_1O8w_RfeCpMmLSyXZmxMWx-VS1fxyMVfVcX73G7xNTZFlyDbwyWqDftYlNUX3GgYifX3zVBfjxbIHXkygSj8kSjBsmkNd1Tjq_11DNwHr8tuv92z5ka5Gs5BZh485jHnCWtzU0f1rAIdyB7m9Eh6m2FSyvUkHC-RkIshf1M8SH8wEcaSxgQWW1kw96Dzu7O4zizfa6Bdiawd4";
+    //String encodedHeader = Base64.encodeToString(value.getBytes(), Base64.DEFAULT);
+    //String head = "Authorization : " + encodedHeader;
+    //@GET("j0s9h")
+    @GET("4514")
+    @Headers("Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4MWU5ZmNlOTg2NGUzYWE1OWM5MjU2OTQ3ZjViMDdhNmNhZmE4MmY1ZGQ3ZjdkZDY0MmUzMzkwNWMyOWEzNGYzYWY0NmIyMWY1N2RkMjgyIn0.eyJhdWQiOiIzIiwianRpIjoiMTgxZTlmY2U5ODY0ZTNhYTU5YzkyNTY5NDdmNWIwN2E2Y2FmYTgyZjVkZDdmN2RkNjQyZTMzOTA1YzI5YTM0ZjNhZjQ2YjIxZjU3ZGQyODIiLCJpYXQiOjE1NjMyNzg5NDksIm5iZiI6MTU2MzI3ODk0OSwiZXhwIjoxNTk0OTAxMzQ5LCJzdWIiOiI5OTcwIiwic2NvcGVzIjpbXX0.Iod7Rv5VTMcnsMKHXdo5KN3ojAZQvIub6RUpfaDI8GosLaVKqon_9rFYcLVSU-w-Jt-EdwhhUb2zfloNhZP-7PiAtwE7qr3xpRUutkO154mFiEAiUh_WxUUz3e5VuuVsFUN4TPu6Qzf-qMtxR-SZsPUUVL7hvLjIGxxN-0498QoDom0jGKiuInoiJsE9lcTkOqpM1d6Tc2nStF350A5-YVo4ZhDW5ZOYwsnyjsYpprwZNFjN3vgRAokgnHMo4hNANSrVvtvFSj-g3uF6pozOm5GOn9YC_SVnEq6MdJaCVnkDYO9cnA63uP_sRZIvFx3aA0oVXNGWbqnCnSObAqOcaEPfABCqFpjal_-Q9CJ-MIN0fOMQ0z2Z8YPf_UOQHTSXlxa-uK9X2iN0bGUEVpYf9f8kULzSvnWcTsUD_t97It0uShDBv7A4x5MRRWrF7s8jyqSw0Vyg_dBV5nxItaspHsO-34vQs_1O8w_RfeCpMmLSyXZmxMWx-VS1fxyMVfVcX73G7xNTZFlyDbwyWqDftYlNUX3GgYifX3zVBfjxbIHXkygSj8kSjBsmkNd1Tjq_11DNwHr8tuv92z5ka5Gs5BZh485jHnCWtzU0f1rAIdyB7m9Eh6m2FSyvUkHC-RkIshf1M8SH8wEcaSxgQWW1kw96Dzu7O4zizfa6Bdiawd4")
+    //Call<List<Details>> getDetails();
+    Call<Details> getDetails();
+}
+

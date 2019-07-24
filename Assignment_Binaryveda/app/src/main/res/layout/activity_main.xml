@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgcol"
+    tools:context="com.example.raghav.assignment_binaryveda.MainActivity"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp"
+    android:paddingBottom="15dp"
+    android:orientation="vertical"
+    >
+
+    <!-- ============  APPBAR DESIGN ================= -->
+
+    <LinearLayout
+        android:id="@+id/appBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/menu_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/menu"
+            android:layout_weight="1"
+
+            />
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Personal Summary"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_weight="3"
+            />
+
+        <ImageView
+            android:id="@+id/chat_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/chat"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:id="@+id/locate_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/location1"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <!-- ENABLING SCROLLING FEATURE -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+<!-- =================  PERSONAL IMAGE AND DESIGNATION ========= -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <!--
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="40dp"
+                android:src="@drawable/splash1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:layout_width="29dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="252dp"
+                android:src="@drawable/location1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="40dp"
+                android:src="@drawable/splash1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Amit Vora"
+                android:textAlignment="textStart"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textDesignation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Senior Software Designer"
+                android:textAlignment="textStart"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="15sp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/location2small"
+                    android:layout_marginRight="9dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Malabar Hills"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!-- ============= PERSONAL DETAIL CARD LAYOUT =================   -->
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <!-- ===== ROW 1 BEGINS ===== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <!--   BAG ICON SET -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+
+                        >
+
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/bag" />
+
+                        <TextView
+                            android:id="@+id/textQualification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="B.Tech"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Qualifications"
+                            android:textSize="10sp"
+                            android:textColor="#878787"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="10dp"
+                        />
+
+                    <!-- CALANDER ICON SET -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/calander"/>
+                        <TextView
+                            android:id="@+id/textExperience"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10 Years"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Work Experience"
+                            android:textSize="10sp"
+                            android:textColor="#878787"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/darker_gray" />
+
+
+                    <!-- EXPECTED CTC SET -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ctc"/>
+                        <TextView
+                            android:id="@+id/textCTC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10-12 Lac"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Expected CTC"
+                            android:textSize="10sp"
+                            android:textColor="#878787"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--==== ROW 1 ENDS =====-->
+
+                <!-- ==== ROW 2 BEGINS===-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#D3D3D3"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Currently Working"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        android:textColor="#878787"
+                        android:layout_marginTop="5dp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/textCurrentlyWorking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="McDermott Price"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="#716f81"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginLeft="7dp"
+                        />
+
+                </LinearLayout>
+
+                <!--==== ROW 2 ENDS =====-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    />
+
+                <!-- ==== ROW 3 BEGINS===-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#D3D3D3"
+
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Designation"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        android:textColor="#878787"
+                        android:layout_marginTop="5dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/textRole"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Senior Design Manager"
+                        android:textSize="12sp"
+                        android:textAlignment="center"
+                        android:textColor="#716f81"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                </LinearLayout>
+
+                <!--==== ROW 3 ENDS =====-->
+
+                <!-- ==== ROW 4 BEGINS===-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        app:tabSelectedTextColor="#00ca9d"
+                        app:tabIndicatorColor="#00ca9d"
+                        >
+
+                    </android.support.design.widget.TabLayout>
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="60sp"
+                        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+                        tools:layout_editor_absoluteX="8dp"
+                        android:background="#D3D3D3"
+
+                        />
+
+
+
+                </LinearLayout>
+
+            <!-- ==== ROW 4 ENDS ===== -->
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    <!-- ======= BUTTONS LIST ======  -->
+
+    <!-- ==== ROW 5 STARTS ===== -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="13dp"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        android:layout_weight="1"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONFIRM"
+            android:textSize="13sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/roundbutton"
+            android:onClick="Confirm_Click"
+            />
+
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+                android:onClick="Edit_Click"
+                />
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
